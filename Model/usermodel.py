@@ -77,6 +77,32 @@ class UserModel(db.Model):
         return {'Leader Board': "User Leader Board", 'Users': [x.json() for x in all_user],
                 "Success_Code": 1}, 200
 
+    # find school leader board.
+    @classmethod
+    def school_leader_board(cls):
+        """
+        :return: school leader board .
+        """
+        # select all schools .
+        all_user = cls.query.order_by(cls.school_id).all()
+        # iterate over schools id .
+        school_id_list = []
+        for user in all_user:
+            if user.school_id in school_id_list:
+                continue
+            else:
+                school_id_list.append(user.school_id)
+        # now I have all school id .
+        # select all user of that school .
+        school_obtained_coin_list = []
+        for school in school_id_list:
+            same_school_user = cls.query.filter_by(school_id=school).all()
+            total_coin = 0
+            for user in same_school_user:
+                total_coin += total_coin + user.us_dollar
+            school_obtained_coin_list.append(total_coin)
+        # make it json serialize
+        return {'school_id': school_id_list, 'total_coin':school_obtained_coin_list}
     # </editor-fold>
 
     # <editor-fold desc="Instance Methods">

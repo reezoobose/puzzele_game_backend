@@ -74,6 +74,22 @@ class LeaderBoard(Resource):
         """
         # return list of  users
         return UserModel.user_leader_board()
+
+
+# Fetch school leader board .
+class SchoolLeaderBoard(Resource):
+    """
+    Return School's leader board .
+    """
+
+    @classmethod
+    def get(cls):
+        """
+        Get Method
+        :return: School with highest score .
+        """
+        return UserModel.school_leader_board()
+
 # </editor-fold>
 
 # ---------------------------------------------------------------------- User Money update---------------------------#
