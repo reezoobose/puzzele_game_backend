@@ -39,7 +39,7 @@ class UserRegister(Resource):
             user.save_data()
             return {'message': 'user created ', 'user_details': user.json(), 'Success_Code': 1}, 201
         else:
-            return {'message': 'user already present with the email id', 'Success_Code': 0}, 400
+            return {'message': 'user already present with the user id', 'Success_Code': 0}, 400
 # </editor-fold>
 
 
