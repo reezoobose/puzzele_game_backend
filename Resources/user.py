@@ -73,7 +73,7 @@ class UpdateUserMoney(Resource):
     update_user_money = reqparse.RequestParser()
     # add arguments
     update_user_money.add_argument('us_dollar', type=str, required=True, help="This field cannot be blank.")
-    update_user_money.add_argument('uuid', type=str, required=True, help="This field cannot be blank.")
+    update_user_money.add_argument('user_id', type=str, required=True, help="This field cannot be blank.")
 
     @classmethod
     def post(cls):
@@ -86,7 +86,7 @@ class UpdateUserMoney(Resource):
         # input data.
         input_data = UpdateUserMoney.update_user_money.parse_args()
         # email id .
-        user = UserModel.find_user(input_data['uuid'])
+        user = UserModel.find_user(input_data['user_id'])
         # if user found.
         if user is not None:
             user.us_dollar = input_data['us_dollar']
