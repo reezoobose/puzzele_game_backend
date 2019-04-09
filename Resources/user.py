@@ -3,8 +3,23 @@
 # Import Flask Rest Full.
 from flask_restful import Resource, reqparse
 from Model.usermodel import UserModel
+import uuid as unique_id
 # </editor-fold>
 
+
+# <editor-fold desc="User Unique Id .">
+# ------------------------------------------------------------------------User Unique id-------------------------------#
+# User class must inherit Resource to implement Post Methods .
+class UerUniqueId(Resource):
+    """
+    Get a unique id  for user .
+    """
+
+    # post method .
+    @staticmethod
+    def get():
+        return {'message': 'unique id created .', 'unique_id': unique_id.uuid1(), 'Success_Code': 1}, 201
+# </editor-fold>
 # ---------------------------------------------------------------------- User Registration---------------------------#
 
 
