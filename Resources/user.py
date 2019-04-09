@@ -68,7 +68,7 @@ class LeaderBoard(Resource):
     contain  a post method .
     """
     @classmethod
-    def post(cls):
+    def get(cls):
         """
         Post method
         """
