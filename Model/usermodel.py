@@ -18,7 +18,7 @@ class UserModel(db.Model):
     # unique not null uuid .
     uuid = db.Column(db.String(30), primary_key=True)
     # school id
-    school_id = db.Column(db.string(30))
+    school_id = db.Column(db.String(30))
     # user in game money
     us_dollar = db.Column(db.BigInteger)
     # </editor-fold>
