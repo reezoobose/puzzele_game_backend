@@ -16,7 +16,7 @@ class UserModel(db.Model):
     #  crete the table to store user model.
     __tabalename_ = 'users'
     # unique not null uuid .
-    uuid = db.Column(db.String(50), primary_key=True)
+    uuid = db.Column(db.String(30), primary_key=True)
     # school id
     school_id = db.Column(db.String(30))
     # user in game money

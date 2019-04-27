@@ -18,7 +18,7 @@ class UerUniqueId(Resource):
     # post method .
     @staticmethod
     def get():
-        return {'message': 'unique id created .', 'unique_id': str(unique_id.uuid1()), 'Success_Code': 1}, 201
+        return {'message': 'unique id created .', 'unique_id': str(unique_id.uuid1())[:30], 'Success_Code': 1}, 201
 # </editor-fold>
 # ---------------------------------------------------------------------- User Registration---------------------------#
 
