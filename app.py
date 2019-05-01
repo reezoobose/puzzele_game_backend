@@ -33,7 +33,7 @@ def register_api():
     api.app = app
     # import user register
     from Resources.user import UserRegister, LeaderBoard, UpdateUserMoney, UerUniqueId , SchoolLeaderBoard
-    from Resources.tournamen import  TournamentRegister,TournamentDetails
+    from Resources.tournament import  TournamentRegister,TournamentDetails
     api.add_resource(UserRegister, '/Register')
     api.add_resource(LeaderBoard, '/LeaderBoard')
     api.add_resource(UpdateUserMoney, '/SetMoney')
