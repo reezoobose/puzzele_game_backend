@@ -50,8 +50,8 @@ class TournamentDetails(Resource):
     #Get method
     @staticmethod
     def get( ):
-        tournments = TournamentModel.get_all_tournaments();
-        if(tournments) is None:
+        tournaments = TournamentModel.get_all_tournaments();
+        if(tournaments) is None:
             return {'message': 'No Tournament present', 'Success_Code': 0}, 400
         else:
             fulltournamentdetails = { }
