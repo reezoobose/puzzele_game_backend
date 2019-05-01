@@ -57,7 +57,7 @@ class TournamentModel(db.Model):
     # remove tournament .
     @classmethod
     def remove_tournament(cls,tournament_id):
-        tournament = get_tournament(tournament_id)
+        tournament = cls.get_tournament(tournament_id)
         tournament.remove_data()
 
 
