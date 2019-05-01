@@ -51,7 +51,7 @@ class TournamentDetails(Resource):
     @staticmethod
     def get( ):
         tournaments = TournamentModel.get_all_tournaments();
-        if len(tournaments) < 0 :
+        if len(tournaments) <= 0 :
             return {'Tournament_details': 'No Tournament present', 'Success_Code': 0}, 400
         else:
             fulltournamentdetails = { }
