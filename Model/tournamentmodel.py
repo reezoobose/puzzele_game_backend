@@ -52,7 +52,7 @@ class TournamentModel(db.Model):
     # get particular tournament .
     @classmethod
     def get_tournament(cls,tournament_id):
-        return cls.query.filter_by(tournament_id=school_id).all( )
+        return cls.query.filter_by(tournament_id=tournament_id).all( )
 
 
     # <editor-fold desc="Instance Methods">
