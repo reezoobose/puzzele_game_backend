@@ -47,7 +47,7 @@ class TournamentModel(db.Model):
     # Find All tournament
     @classmethod
     def get_all_tournaments(cls):
-        return  cls.query(tournament_id).all()
+        return  cls.query().all()
 
     # get particular tournament .
     @classmethod
