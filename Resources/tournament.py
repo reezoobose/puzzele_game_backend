@@ -55,7 +55,9 @@ class TournamentDetails(Resource):
             return {'message': 'No Tournament present', 'Success_Code': 0}, 400
         else:
             fulltournamentdetails = { }
-            for item in tournaments:
-                fulltournamentdetails.update(item.json())
+            for idx,item in  enumerate(tournaments, start=0):
+                dictkey = idx
+                dictValue = item.json()
+                fulltournamentdetails[dictkey] = dictValue
             return {'Tournament_details':fulltournamentdetails, 'Success_Code': 1}, 200
 # </editor-fold>
