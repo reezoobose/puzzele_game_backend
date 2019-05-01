@@ -61,3 +61,26 @@ class TournamentDetails(Resource):
                 fulltournamentdetails[dictkey] = dictValue
             return {'Tournament_details':fulltournamentdetails, 'Success_Code': 1}, 200
 # </editor-fold>
+
+# ================================== Tournament Details ==================================
+
+#  <editor-fold desc="Tournament Details .">
+#  User class must inherit Resource to implement Post Methods .
+class RemoveTournament(Resource):
+    # create a parser.
+    tournament_remove_parser = reqparse.RequestParser( )
+    # add arguments
+    tournament_remove_parser.add_argument('tournament_id', type=str, required=True, help="This field cannot be blank.")
+
+    #post method
+    @staticmethod
+    def post( ):
+        # get data from json.
+        input_data = RemoveTournament.tournament_remove_parser.parse_args( )
+        tournament = TournamentModel.get_tournament(input_data['tournament_id']);
+        if(tournament) is None:
+            return {'message': 'No Tournament present with this id ', 'Success_Code': 0}, 400
+        else:
+            TournamentModel.remove_tournament(input_data['tournament_id'])
+            return {'message': 'Tournament removed ', 'Success_Code': 1}, 200
+# </editor-fold>

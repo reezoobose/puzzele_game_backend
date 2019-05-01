@@ -54,6 +54,12 @@ class TournamentModel(db.Model):
     def get_tournament(cls,tournament_id):
         return cls.query.filter_by(tournament_id=tournament_id).first()
 
+    # remove tournament .
+    @classmethod
+    def remove_tournament(cls,tournament_id):
+        tournament = get_tournament(tournament_id)
+        tournament.remove_data()
+
 
     # <editor-fold desc="Instance Methods">
     # Save the Object in the data base .
