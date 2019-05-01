@@ -46,19 +46,16 @@ class TournamentRegister(Resource):
 #  <editor-fold desc="Tournament Details .">
 #  User class must inherit Resource to implement Post Methods .
 class TournamentDetails(Resource):
+
+    #Get method
     @staticmethod
     def get(cls):
-    """
-    Return all tournaments details.
-    :param cls:
-    :return:
-    """
-        tournment = TournamentModel.get_all_tornaments();
-        if(tournment) is None:
+        tournments = TournamentModel.get_all_tornaments();
+        if(tournments) is None:
             return {'message': 'No Tournament present', 'Success_Code': 0}, 400
         else:
             fulltournamentdetails = ""
-            for item in tournament:
+            for item in tournaments:
                 fulltournamentdetails + = item.json()
-        return {'message':'Tournament_details':fulltournamentdetails, 'Success_Code': 1}, 200
+            return {'message':'Tournament_details':fulltournamentdetails, 'Success_Code': 1}, 200
 # </editor-fold>
