@@ -57,5 +57,5 @@ class TournamentDetails(Resource):
             fulltournamentdetails = { }
             for item in tournaments:
                 fulltournamentdetails.update(item.json())
-            return {'message':'Tournament_details':fulltournamentdetails, 'Success_Code': 1}, 200
+            return {'Tournament_details':fulltournamentdetails, 'Success_Code': 1}, 200
 # </editor-fold>

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07979a7-d83e-42f8-899e-13cc4f2f427d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Model/tournamentmodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/tournamentmodel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/tournament.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/tournament.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +45,8 @@
       <file leaf-file-name="tournament.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Resources/tournament.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+            <state relative-caret-position="436">
+              <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
               <folding>
                 <element signature="e#82#126#0" expanded="true" />
               </folding>
@@ -641,8 +640,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/tournament.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+        <state relative-caret-position="436">
+          <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
           <folding>
             <element signature="e#82#126#0" expanded="true" />
           </folding>
