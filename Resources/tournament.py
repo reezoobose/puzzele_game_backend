@@ -53,12 +53,12 @@ class TournamentDetails(Resource):
     :param cls:
     :return:
     """
-    tournment = TournamentModel.get_all_tornaments();
-    if(tournment) is None:
-        return {'message': 'No Tournament present', 'Success_Code': 0}, 400
-    else:
-        fulltournamentdetails = ""
-        for item in tournament:
-            fulltournamentdetails + = item.json()
-    return {'message':'Tournament_details':fulltournamentdetails, 'Success_Code': 1}, 200
+        tournment = TournamentModel.get_all_tornaments();
+        if(tournment) is None:
+            return {'message': 'No Tournament present', 'Success_Code': 0}, 400
+        else:
+            fulltournamentdetails = ""
+            for item in tournament:
+                fulltournamentdetails + = item.json()
+        return {'message':'Tournament_details':fulltournamentdetails, 'Success_Code': 1}, 200
 # </editor-fold>
