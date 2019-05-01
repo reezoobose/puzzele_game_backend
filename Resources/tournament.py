@@ -51,8 +51,8 @@ class TournamentDetails(Resource):
     @staticmethod
     def get( ):
         tournaments = TournamentModel.get_all_tournaments();
-        if(tournaments) is None:
-            return {'message': 'No Tournament present', 'Success_Code': 0}, 400
+        if len(tournaments) < 0
+            return {'Tournament_details': 'No Tournament present', 'Success_Code': 0}, 400
         else:
             fulltournamentdetails = { }
             for idx,item in  enumerate(tournaments, start=0):
