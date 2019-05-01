@@ -32,12 +32,15 @@ def register_api():
     """attaches api routes to the flask app"""
     api.app = app
     # import user register
-    from Resources.user import UserRegister, LeaderBoard, UpdateUserMoney, UerUniqueId , SchoolLeaderBoard
+    from Resources.user import UserRegister, LeaderBoard, UpdateUserMoney, UerUniqueId , SchoolLeaderBoard , \
+        TournamentRegister,TournamentDetails
     api.add_resource(UserRegister, '/Register')
     api.add_resource(LeaderBoard, '/LeaderBoard')
     api.add_resource(UpdateUserMoney, '/SetMoney')
     api.add_resource(UerUniqueId, '/Getid')
     api.add_resource(SchoolLeaderBoard,'/SchoolLeaderBoard')
+    api.add_resource(TournamentRegister, '/TournamentRegister')
+    api.add_resource(TournamentDetails, '/TournamentDetails')
 
 
 # register all end points .
