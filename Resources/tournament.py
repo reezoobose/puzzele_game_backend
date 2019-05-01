@@ -21,7 +21,7 @@ class TournamentRegister(Resource):
 
     # post method .
     @staticmethod
-    def post(cls):
+    def post( ):
         """
         Post Method for user registration.
         :return: Success code 1 on successful registration .
@@ -49,7 +49,7 @@ class TournamentDetails(Resource):
 
     #Get method
     @staticmethod
-    def get(cls):
+    def get( ):
         tournments = TournamentModel.get_all_tournaments();
         if(tournments) is None:
             return {'message': 'No Tournament present', 'Success_Code': 0}, 400
