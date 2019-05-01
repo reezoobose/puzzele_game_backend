@@ -50,12 +50,12 @@ class TournamentDetails(Resource):
     #Get method
     @staticmethod
     def get(cls):
-        tournments = TournamentModel.get_all_tornaments();
+        tournments = TournamentModel.get_all_tournaments();
         if(tournments) is None:
             return {'message': 'No Tournament present', 'Success_Code': 0}, 400
         else:
-            fulltournamentdetails = ""
+            fulltournamentdetails = { }
             for item in tournaments:
-                fulltournamentdetails + = item.json()
+                fulltournamentdetails.update(item.json())
             return {'message':'Tournament_details':fulltournamentdetails, 'Success_Code': 1}, 200
 # </editor-fold>

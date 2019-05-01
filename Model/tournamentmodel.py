@@ -46,7 +46,7 @@ class TournamentModel(db.Model):
     # region for classMethod
     # Find All tournament
     @classmethod
-    def get_all_tornaments(cls):
+    def get_all_tournaments(cls):
         return  cls.query.order_by(cls.tournament_id).all()
 
     # get particular tournament .
