@@ -126,3 +126,39 @@ class UpdateUserMoney(Resource):
         return {'message': 'No user found with this email id ', 'Success_Code': 0}, 404
 # </editor-fold>
 
+# ------------------------------------------------------------- User  sholl id update---------------------------#
+
+
+# <editor-fold desc="update user school id">
+class UpdateUserSchoolId(Resource):
+    """
+    update user school id .
+    """
+    # create a parser.
+    update_user_school_id = reqparse.RequestParser()
+    # add arguments
+    update_user_school_id.add_argument('new_school_id', type=str, required=True, help="This field cannot be blank.")
+    update_user_school_id.add_argument('user_id', type=str, required=True, help="This field cannot be blank.")
+
+    @classmethod
+    def post(cls):
+        """
+        make a post with uuid  and updated school id .
+        it will update the school id value in the database .
+        :return: update user .
+        Example: post contain json {'uuid':'420','new_school_id':'999'}
+        """
+        # input data.
+        input_data = UpdateUserSchoolId.update_user_school_id.parse_args()
+        # email id .
+        user = UserModel.find_user(input_data['user_id'])
+        # if user found.
+        if user is not None:
+            old_school_id = user.school_id
+            user.school_id = input_data['new_school_id']
+            user.save_data()
+            result = 'User id changed from : '+old_school_id +' to :'+user.school_id;
+            return {'Result':result,''message': user.json(), 'Success_Code': 1}, 200
+        return {'message': 'No user found with this email id ', 'Success_Code': 0}, 404
+# </editor-fold>
+
