@@ -157,8 +157,7 @@ class UpdateUserSchoolId(Resource):
             old_school_id = user.school_id
             user.school_id = input_data['new_school_id']
             user.save_data()
-            result = 'User id changed from : '+old_school_id +' to :'+user.school_id;
-            return {'Result':result,'message': user.json(), 'Success_Code': 1}, 200
+            return {'message': user.json(), 'Success_Code': 1}, 200
         return {'message': 'No user found with this email id ', 'Success_Code': 0}, 404
 # </editor-fold>
 
