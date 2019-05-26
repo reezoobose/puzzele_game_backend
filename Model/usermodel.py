@@ -112,7 +112,7 @@ class UserModel(db.Model):
         # Sort it .
         sorted_x = sorted(resultDict.items( ), key=operator.itemgetter(0))
         # make it json serialize
-        return {'Leader Board':'School Leader Board','School':[{"School_id":k,"Total_Coin":V} for (k,v) in sorted_x ]}
+        return {'Leader Board':'School Leader Board','School':[{"School_id":k,"Total_Coin":v} for (k,v) in sorted_x ]}
     # </editor-fold>
 
     # <editor-fold desc="Instance Methods">
