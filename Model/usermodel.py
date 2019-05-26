@@ -107,13 +107,10 @@ class UserModel(db.Model):
         # iterate to createa dictionary .
         for num,item in enumerate(school_id_list, start=0):
             resultDict[item] = school_obtained_coin_list[int(num)]
-
-
         #Sort the dictionary.
-        sorted_x = sorted(x.items( ), key=lambda kv: kv[1])
+        sorted_list = sorted(x.items( ), key=lambda kv: kv[1])
         # make it json serialize
-        return {'Leader Board':'School Leader Board','School':[{"School_id":k,"Total_Coin":str(v)} for (k,
-                                                                                                       v) in sorted_x ]}
+        return {'Leader Board':'School Leader Board','School':[{"School_id":k,"Total_Coin":str(v)} for (k,v) in sorted_list ]}
     # </editor-fold>
 
     # <editor-fold desc="Instance Methods">
