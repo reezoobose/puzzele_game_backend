@@ -72,7 +72,7 @@ class UserModel(db.Model):
         :return: all users according to money .
         """
         # store all user .
-        all_user = cls.query.order_by(cls.us_dollar).all()
+        all_user = cls.query.order_by(desc(cls.us_dollar)).all()
         # return the all user json format .
         return {'Leader Board': "User Leader Board", 'Users': [x.json() for x in all_user],
                 "Success_Code": 1}, 200
