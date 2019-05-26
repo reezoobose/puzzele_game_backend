@@ -113,8 +113,8 @@ class UserModel(db.Model):
         return {'Leader Board':'School Leader Board','School':[{"School_id":k,"Total_Coin":str(v)} for (k,
                                                                                                        v) in sorted_x ]}
     # </editor-fold>
-
-    def dict_val(x):
+    @classmethod
+    def dict_val(cls,x):
         print("Sorting for {0}".format(x[1]))
         return x[1]
 
