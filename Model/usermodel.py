@@ -3,7 +3,7 @@
 # import sql alchemy object .
 from sql_alchemy_extension import sql_alchemy as db
 from sqlalchemy import desc
-import collections
+import operator
 # </editor-fold>
 
 
@@ -110,9 +110,9 @@ class UserModel(db.Model):
             resultDict[item] = school_obtained_coin_list[num]
         # Once the dictionary is created .
         # Sort it .
-        sorted_dict = collections.OrderedDict(resultDict)
+        sorted_x = sorted(resultDict.items( ), key=operator.itemgetter(1))
         # make it json serialize
-        return {'School Leader Board':sorted_dict}
+        return {'School Leader Board':dict(sorted_x)}
     # </editor-fold>
 
     # <editor-fold desc="Instance Methods">
