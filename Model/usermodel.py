@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # import sql alchemy object .
 from sql_alchemy_extension import sql_alchemy as db
+from sqlalchemy import desc
 # </editor-fold>
 
 
