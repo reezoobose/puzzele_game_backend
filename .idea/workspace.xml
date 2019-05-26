@@ -21,8 +21,8 @@
       <file leaf-file-name="usermodel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Model/usermodel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="112" column="72" selection-start-line="112" selection-start-column="72" selection-end-line="112" selection-end-column="72" />
+            <state relative-caret-position="184">
+              <caret line="106" column="41" lean-forward="true" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -277,7 +277,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -615,8 +615,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/usermodel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="112" column="72" selection-start-line="112" selection-start-column="72" selection-end-line="112" selection-end-column="72" />
+        <state relative-caret-position="184">
+          <caret line="106" column="41" lean-forward="true" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
         </state>
       </provider>
     </entry>

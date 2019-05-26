@@ -3,7 +3,6 @@
 # import sql alchemy object .
 from sql_alchemy_extension import sql_alchemy as db
 from sqlalchemy import desc
-import operator
 # </editor-fold>
 
 
@@ -107,12 +106,13 @@ class UserModel(db.Model):
         resultDict = { }
         # iterate to createa dictionary .
         for num,item in enumerate(school_id_list, start=0):
-            resultDict[item] = school_obtained_coin_list[num]
+            resultDict[item] = school_obtained_coin_list[int(num)]
         # Once the dictionary is created .
         # Sort it .
-        sorted_x = sorted(resultDict.items( ), key=operator.itemgetter(1))
+        sorted_x = sorted(resultDict.items( ), key=lambda x: x[1])
         # make it json serialize
-        return {'Leader Board':'School Leader Board','School':[{"School_id":k,"Total_Coin":v} for (k,v) in sorted_x ]}
+        return {'Leader Board':'School Leader Board','School':[{"School_id":k,"Total_Coin":str(v)} for (k,
+                                                                                                       v) in sorted_x ]}
     # </editor-fold>
 
     # <editor-fold desc="Instance Methods">
