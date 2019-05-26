@@ -107,6 +107,8 @@ class UserModel(db.Model):
         # iterate to createa dictionary .
         for num,item in enumerate(school_id_list, start=0):
             resultDict[item] = school_obtained_coin_list[int(num)]
+
+            
         #Sort the dictionary.
         sorted_x = sorted(resultDict.items( ), key=x:x[1])
         # make it json serialize
