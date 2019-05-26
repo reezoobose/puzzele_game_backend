@@ -110,7 +110,7 @@ class UserModel(db.Model):
             resultDict[item] = school_obtained_coin_list[num]
         # Once the dictionary is created .
         # Sort it .
-        sorted_x = sorted(resultDict.items( ), key=operator.itemgetter(1))
+        sorted_x = sorted(resultDict.items( ), key=operator.itemgetter(0))
         # make it json serialize
         return {'School Leader Board':dict(sorted_x)}
     # </editor-fold>
