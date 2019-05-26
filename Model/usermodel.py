@@ -107,16 +107,13 @@ class UserModel(db.Model):
         # iterate to createa dictionary .
         for num,item in enumerate(school_id_list, start=0):
             resultDict[item] = school_obtained_coin_list[int(num)]
+        print(resultDict)
         #Sort the dictionary.
-        sorted_x = sorted(resultDict.items( ), key=dict_val)
+        sorted_x = sorted(resultDict.items( ), key=x: x[1])
         # make it json serialize
         return {'Leader Board':'School Leader Board','School':[{"School_id":k,"Total_Coin":str(v)} for (k,
                                                                                                        v) in sorted_x ]}
     # </editor-fold>
-    @classmethod
-    def dict_val(cls,x):
-        print("Sorting for {0}".format(x[1]))
-        return x[1]
 
     # <editor-fold desc="Instance Methods">
     # Save the Object in the data base .
