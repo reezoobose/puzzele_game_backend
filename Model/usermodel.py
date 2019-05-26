@@ -107,6 +107,7 @@ class UserModel(db.Model):
         # iterate to createa dictionary .
         for num,item in enumerate(school_id_list, start=0):
             resultDict[item] = school_obtained_coin_list[int(num)]
+            print("Key--->"+resultDict[item]+"Value----->"school_obtained_coin_list[int(num))
         # Once the dictionary is created .
         # Sort it .
         sorted_x = sorted(resultDict.items( ), key=lambda x: x[1])
