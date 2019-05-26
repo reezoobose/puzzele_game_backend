@@ -3,6 +3,7 @@
 # import sql alchemy object .
 from sql_alchemy_extension import sql_alchemy as db
 from sqlalchemy import desc
+import collections
 # </editor-fold>
 
 
@@ -102,8 +103,16 @@ class UserModel(db.Model):
             for user in same_school_user:
                 total_coin += total_coin + user.us_dollar
             school_obtained_coin_list.append(total_coin)
+        #all details dict.
+        resultDict = { }
+        # iterate to createa dictionary .
+        for num,item in enumerate(school_id_list, start=0):
+            resultDict[item] = school_obtained_coin_list[num]
+        # Once the dictionary is created .
+        # Sort it .
+        sorted_dict = collections.OrderedDict(resultDict)
         # make it json serialize
-        return {'school_id': school_id_list, 'total_coin':school_obtained_coin_list}
+        return {'School Leader Board':sorted_dict}
     # </editor-fold>
 
     # <editor-fold desc="Instance Methods">
