@@ -51,7 +51,7 @@ class UserModel(db.Model):
         """
         # Select from the table users where  email_id = email_id limit 1 .
         # return a UserModel Object .
-        return cls.query.filter_by(school_id=school_id).all( )
+        return cls.query.filter_by(school_id=school_id).order_by(school_id.desc())all( )
 
     # Find a single user with a user_unique_identifier
     @classmethod
